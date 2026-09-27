@@ -9,6 +9,25 @@ public class GroceryManagementSystem {
             }
         }
     }
+    /**
+     * Restocks an item by searching for its name and adding
+     * the specified amount to its current stock.
+     *
+     * @param names the array containing the item names
+     * @param stocks the array containing the stock amounts
+     * @param target the name of the item to restock
+     * @param amount the amount to add to the item's stock
+     */
+    public static void restockItem(String[] names, int[] stocks, String target, int amount) {
+        for (int i = 0; i < names.length; i++) {
+            if (names[i] != null && names[i].equals(target)) {
+                stocks[i] += amount;
+                return;
+            }
+        }
+
+        System.out.println("Item not found.");
+    }
 
     public static void main(String[] args) {
         // Main method implementation goes here
@@ -17,7 +36,6 @@ public class GroceryManagementSystem {
         int[] itemStocks = new int[10];
 
        
-        
         printInventory(itemNames, itemPrices, itemStocks);
     }
 }
