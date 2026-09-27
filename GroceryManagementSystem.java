@@ -53,7 +53,7 @@ public class GroceryManagementSystem {
 
             do {
                 System.out.print("Enter option: ");
-                prompt = in.nextInt();
+                prompt = Integer.parseInt(in.nextLine());
                 if(!(prompt >= 1 && prompt <= 3)){
                     System.out.println("Invalid option. Please try again.");
                 }
@@ -68,15 +68,12 @@ public class GroceryManagementSystem {
                 System.out.print("Enter name of item to restock: ");
                 target = in.nextLine();
                 System.out.print("Enter amount to add to stock: ");
-                amt = in.nextInt();
+                amt = Integer.parseInt(in.nextLine());
                 restockItem(itemNames, itemStocks, target, amt);
             }
             else break;
         }
         
         in.close();
-
-       
-        printInventory(itemNames, itemPrices, itemStocks);
     }
 }
