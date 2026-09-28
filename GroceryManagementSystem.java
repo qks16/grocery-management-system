@@ -2,6 +2,14 @@ import java.util.Scanner;
 
 public class GroceryManagementSystem {
 
+    /**
+     * Prints the inventory of items, including their names,
+     * prices, and stock amounts.
+     *
+     * @param names the array containing the item names
+     * @param prices the array containing the item prices
+     * @param stocks the array containing the stock amounts
+     */
     public static void printInventory(String[] names, double[] prices, int[] stocks) {
         System.out.println("Inventory:");
 
